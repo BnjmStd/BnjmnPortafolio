@@ -1,0 +1,36 @@
+---
+const { href, p } = Astro.props
+---
+
+<a
+    class="custom-link"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+>
+    <slot />
+    {p}
+</a>
+
+<style>
+    
+    .custom-link {
+        color: white;
+        border-radius: 9999px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem; /* Equivalente a gap-x-2 (0.5rem) */
+        padding: 0.5rem 1.25rem; /* Equivalente a py-2 px-1 (0.5rem 0.25rem) */
+        text-decoration: none;
+        transition: color 0.5s ease-in transform 0.5s ease-in-out;
+        background-color: rgba(255, 255, 255, 0.05);
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: scale(1.1);
+        }
+    }
+
+</style>

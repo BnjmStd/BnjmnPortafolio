@@ -1,0 +1,15 @@
+---
+const { id, style } = Astro.props
+---
+
+<section id={id} class={`main-section`} style={style}>
+    <slot />
+</section>
+
+<style>
+    .main-section {
+        width: 100%;
+        max-width: 740px;
+        margin: 0 auto;
+    }
+</style>

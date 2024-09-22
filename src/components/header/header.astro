@@ -1,0 +1,106 @@
+---
+const navItems = [
+    { title: "Experiencia", label: "experiencia", url: "#experiencia" },
+    { title: "Proyectos", label: "proyectos", url: "#proyectos" },
+    { title: "Sobre mí", label: "sobre-mi", url: "#sobre-mi" },
+    { title: "Contacto", label: "contacto", url: "mailto:miduga@gmail.com" },
+];
+---
+
+<header class="header">
+    <nav class="nave" id="landing-header">
+        {
+            navItems.map((link) => (
+                <a aria-label={link.label} href={link.url} class="nav-link">
+                    {link.title}
+                </a>
+            ))
+        }
+    </nav>
+</header>
+
+<style>
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+
+    .nave {
+        display: flex;
+        padding: 0 12px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        border-radius: 9999px;
+        color: #4a5568;
+        justify-content: center;
+        align-items: center;
+
+        transition: box-shadow 0.5s ease;
+
+        animation: animationNav 2s linear both;
+        animation-timeline: scroll(root block);
+        animation-range: 0 200px;
+
+        background-color: rgba(31, 41, 55, 0); /* bg-gray-800/0 */
+    }
+
+    .nav-link {
+        position: relative;
+        display: block;
+        padding: 8px;
+        transition: color 0.3s ease;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: #4299e1;
+        }
+    }
+
+    .nav-link.active {
+        color: #4299e1;
+    }
+
+    @keyframes animationNav {
+        to {
+            box-shadow: 0 0 0 calc(1px + var(--ring-offset-width, 0px))
+                var(--ring-color, rgba(59, 130, 246, 0.5));
+            backdrop-filter: blur(1000px);
+            color: black;
+            border: 2px solid rgba(86, 102, 122, 0);
+        }
+    }
+</style>
+
+<script type="module">
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll("header nav a");
+
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach((link) => {
+                        if (
+                            link.getAttribute("aria-label") === entry.target.id
+                        ) {
+                            link.classList.add("active");
+                        } else {
+                            link.classList.remove("active");
+                        }
+                    });
+                }
+            });
+        },
+        { threshold: 0.3 },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+</script>

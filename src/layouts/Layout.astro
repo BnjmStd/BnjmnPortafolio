@@ -1,0 +1,93 @@
+---
+import { ClientRouter } from "astro:transitions";
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<ClientRouter />
+	</head>
+	<body>
+		<div class="background-container">
+			<div class="background-circle circle-left"></div>
+			<div class="background-circle circle-right"></div>
+		</div>
+
+		<div>
+			<slot />
+		</div>
+	</body>
+</html>
+
+<style is:global>
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+
+	html {
+		font-family: 'Courier New', Courier, monospace, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		background: #13151a;
+		color: #fff;
+	}
+
+	body {
+		display: flex;
+		flex-direction: column;
+		padding: 80px;
+	}
+
+</style>
+
+<style>
+
+	.background-container {
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 100vw;
+		background-color: #0f172a;
+		z-index: -1;
+	}
+
+	.background-circle {
+		position: absolute;
+		height: 500px;
+		width: 500px;
+		border-radius: 50%;
+		background: radial-gradient(
+			circle farthest-side,
+			rgba(255, 0, 182, 0.15),
+			rgba(255, 255, 255, 0)
+		);
+	}
+
+	.circle-left {
+		bottom: 0;
+		left: -20%;
+		top: -10%;
+		right: 0;
+	}
+
+	.circle-right {
+		bottom: 0;
+		right: -20%;
+		top: -10%;
+	}
+
+</style>
