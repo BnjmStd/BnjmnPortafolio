@@ -1,0 +1,24 @@
+---
+import ExperienceItem from "../experienceItem/experienceItem.astro";
+
+import { work } from "../../content/cv/cv.json"
+
+---
+
+<ol class="olist">
+    {
+        work.map((experience) => (
+            <li class="">
+                <ExperienceItem experience={experience} />
+            </li>
+        ))
+    }
+</ol>
+
+<style>
+    .olist {
+        position: relative;
+        margin-top: 4rem;
+        list-style-type: none;
+    }
+</style>

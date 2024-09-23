@@ -29,7 +29,7 @@ const navItems = [
         align-items: center;
         justify-content: center; 
         width: 100%;
-        margin-top: 0.5rem;
+        margin-top: 1rem;
     }
 
     .nave {
@@ -48,7 +48,7 @@ const navItems = [
         animation-timeline: scroll(root block);
         animation-range: 0 200px;
 
-        background-color: rgba(31, 41, 55, 0); /* bg-gray-800/0 */
+        background-color: rgba(31, 41, 55, 0);
     }
 
     .nav-link {
@@ -65,13 +65,14 @@ const navItems = [
     }
 
     .nav-link.active {
-        color: #4299e1;
+        color: rgba(0, 153, 255, 0.8);
     }
 
     @keyframes animationNav {
         to {
             box-shadow: 0 0 0 calc(1px + var(--ring-offset-width, 0px))
                 var(--ring-color, rgba(59, 130, 246, 0.5));
+            background: black;
             backdrop-filter: blur(1000px);
             color: black;
             border: 2px solid rgba(86, 102, 122, 0);

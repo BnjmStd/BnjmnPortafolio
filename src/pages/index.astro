@@ -1,31 +1,58 @@
 ---
 import SectionContainer from "../components/section/sectionContainer.astro";
 import Robot from "../icons/Robot.astro";
-import Welcome from "../components/section/welcome.astro"
+import Welcome from "../components/section/welcome.astro";
 import Layout from "../layouts/Layout.astro";
 import Header from "../components/header/header.astro";
+import Experience from "../components/section/experience.astro";
+import Footer from "../components/section/footer.astro";
+import BriefCase from "../icons/BriefCase.astro";
 ---
 
 <Layout title="Bnjmn AA - Mi portafolio">
-	
 	<Header />
 
 	<Welcome />
 
-	<SectionContainer id="tecnologias" style={{
-		paddingBottom: '2rem', paddingTop: '2rem'
-	}}>
-		<h2 style={{
-			fontSize: '1.5rem',
-			fontWeight: 600,
-			marginBottom: '1.5rem',
-			display: 'flex',
-			gap: '0.5rem',
-			alignItems: 'center'
-		}}>
+	<SectionContainer
+		id="tecnologias"
+		style={{
+			paddingBottom: "2rem",
+			paddingTop: "2rem",
+		}}
+	>
+		<h2
+			style={{
+				fontSize: "1.5rem",
+				fontWeight: 600,
+				marginBottom: "1.5rem",
+				display: "flex",
+				gap: "0.5rem",
+				alignItems: "center",
+			}}
+		>
 			<Robot />
 			Tecnologias
 		</h2>
-
 	</SectionContainer>
+
+	<SectionContainer id="experiencia">
+		<h2
+			style={{
+				fontSize: "1.5rem",
+				fontWeight: 600,
+				marginBottom: "1.5rem",
+				display: "flex",
+				gap: "0.5rem",
+				alignItems: "center",
+			}}
+		>
+			<BriefCase />
+			Experiencia Laboral
+		</h2>
+
+		<Experience />
+	</SectionContainer>
+
+	<Footer />
 </Layout>

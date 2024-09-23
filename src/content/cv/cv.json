@@ -1,0 +1,213 @@
+{
+    "basics": {
+        "name": "Benjamín Astudillo",
+        "label": "Ingeniero Civil en Bioinformática, especializado en Desarrollo de Software y Administración de Sistemas ♥️",
+        "availableForWork": "Available for work",
+        "image": "",
+        "email": "benja_e_e@hotmail.com",
+        "phone": "+569 40953953",
+        "url": "-",
+        "summary": "💻 Ansioso por seguir aprendiendo desarrollo web",
+        "location": {
+            "address": "",
+            "postalCode": "01234",
+            "city": "Talca",
+            "countryCode": "CH",
+            "region": "Maule"
+        },
+        "profiles": [
+            {
+                "network": "GitHub",
+                "username": "BnjmStd",
+                "url": "https://github.com/BnjmStd"
+            },
+            {
+                "network": "LinkedIn",
+                "username": "BnjmStd",
+                "url": "https://www.linkedin.com/in/benignodev/"
+            }
+        ]
+    },
+    "work": [
+        {
+            "name": "Grid & Code",
+            "position": "COO",
+            "url": "-",
+            "startDate": "2024-01-02",
+            "endDate": "current",
+            "summary": "Empresa tecnológica",
+            "highlights": [
+                ""
+            ]
+        }
+    ],
+    "volunteer": [
+        {
+            "organization": "",
+            "position": "",
+            "url": "",
+            "startDate": "",
+            "endDate": "",
+            "summary": "",
+            "highlights": [
+                ""
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Universidad de Talca, Chile",
+            "url": "utalca.cl",
+            "area": "Ingeniero Civil en Bioinformática",
+            "studyType": "",
+            "startDate": "2018-01-01",
+            "endDate": "2024-01-01",
+            "score": "",
+            "courses": [
+                ""
+            ]
+        }
+    ],
+    "awards": [
+        {
+            "title": "",
+            "date": "",
+            "awarder": "",
+            "summary": ""
+        }
+    ],
+    "certificates": [
+        {
+            "name": "LICENCIADO EN CIENCIAS DE LA INGENIERÍA",
+            "date": "01-08-2024",
+            "issuer": "UNIVERSIDAD DE TALCA",
+            "url": ""
+        },
+        {
+            "name": "INGENIERO CIVIL EN BIOINFORMÁTICA",
+            "date": "01-08-2024",
+            "issuer": "UNIVERSIDAD DE TALCA",
+            "url": ""
+        },
+        {
+            "name": "Desarrollo de Software y Administración de Sistemas",
+            "date": "01-08-2024",
+            "issuer": "UNIVERSIDAD DE TALCA",
+            "url": ""
+        }
+    ],
+    "publications": [
+        {
+            "name": "",
+            "publisher": "",
+            "releaseDate": "",
+            "url": "",
+            "summary": ""
+        }
+    ],
+    "skills": [
+        {
+            "name": "HTML",
+            "level": "Master",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend"
+            ],
+            "icon": "Html"
+        },
+        {
+            "name": "CSS",
+            "level": "Master",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "Diseño Responsive"
+            ],
+            "icon": "Css"
+        },
+        {
+            "name": "JavaScript",
+            "level": "Master",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend",
+                "Backend",
+                "Fullstack"
+            ],
+            "icon": "Javascript"
+        },
+        {
+            "name": "Git",
+            "level": "Avanzado",
+            "keywords": [
+                "Control de Versiones",
+                "Colaboración",
+                "Código Fuente"
+            ],
+            "icon": "Git"
+        },
+        {
+            "name": "NextFlow",
+            "level": "Medio",
+            "keywords": [
+                "Control de Versiones",
+                "Colaboración"
+            ],
+            "icon": "Nextflow"
+        },
+        {
+            "name": "React",
+            "level": "Medio",
+            "keywords": [
+                "Desarrollo Web",
+                "Frontend"
+            ],
+            "icon": "React"
+        },
+        {
+            "name": "Python",
+            "level": "Medio",
+            "keywords": [
+                "Machine Learning",
+                "Data analytics"
+            ],
+            "icon": "Python"
+        }
+    ],
+    "languages": [
+        {
+            "language": "Spanish",
+            "fluency": "Native speaker"
+        },
+        {
+            "language": "English",
+            "fluency": "B3"
+        }
+    ],
+    "references": [
+        {
+            "name": "",
+            "reference": ""
+        }
+    ],
+    "projects": [
+        {
+            "name": "Data4Life",
+            "isActive": false,
+            "description": "Historial médico IA",
+            "highlights": [
+                "Toda tu información médica en un solo lugar"
+            ],
+            "url": ""
+        },
+        {
+            "name": "MetaFoodCraft",
+            "isActive": true,
+            "description": "Aprende a alimentarte, y conocer más de los alimentos con MetaFoodCraft",
+            "highlights": [
+                ""
+            ],
+            "url": ""
+        }
+    ]
+}

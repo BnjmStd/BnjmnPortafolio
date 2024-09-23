@@ -5,6 +5,20 @@ import CustomLink from "../customLink/customLink.astro";
 import Linkedln from "../../icons/Linkedln.astro";
 import SectionContainer from "./sectionContainer.astro";
 import Badget from "../badget/badget.astro";
+
+import { basics } from "../../content/cv/cv.json"
+
+const getIconComponent = (network: string) => {
+  switch (network) {
+    case "GitHub":
+      return Github;
+    case "LinkedIn":
+      return Linkedln;
+    default:
+      return null;
+  }
+}
+
 ---
 
 <main class="main__container">
@@ -12,35 +26,41 @@ import Badget from "../badget/badget.astro";
 
         <Badget />
 
-        <h1 class="main-heading">Hola, soy Benjamín</h1>
+        <h1 class="main-heading">Hola, {basics.name}</h1>
 
         <h2 class="sub-heading">
             <span class="experience"></span>
             <span class="description">
-                Ingeniero Civil en Bioinformática, especializado en Desarrollo
-                de Software y Administración de Sistemas
+                {basics.label}
             </span>
-            <span class="location"> De Maule, Chile 🆑❣️</span>
-            <span class="learning"
-                >Ansioso por seguir aprendiendo desarrollo web</span
+            <span class="location"> 
+                De {basics.location.region}, 
+                {basics.location.countryCode} 🆑❣️
+            </span>
+            <span class="learning">{basics.summary}</span
             >
         </h2>
 
         <nav class="container__social">
-            <CustomLink
-                p="LinkedIn"
-                href="https://www.linkedin.com/in/bnjmnaa/"
-            >
-                <Linkedln />
-            </CustomLink>
+            {
+                basics.profiles.map((el) => {
+                    const IconComponent = getIconComponent(el.network);
 
-            <CustomLink p="GitHub" href="https://www.linkedin.com/in/bnjmnaa/">
-                <Github />
-            </CustomLink>
+                    return (
+                        <CustomLink p={el.network} href={el.url}>
+                            {IconComponent && <IconComponent />} {/* Renderiza el ícono si existe */}
+                        </CustomLink>
+                    )
+                })
+            }
 
-            <CustomLink p="Mail" href="mailto:benja_e_e@hotmail.com">
+            <CustomLink p="Mail" href={`"mailto:${basics.email}"`}>
                 <Mail />
             </CustomLink>
+
+            {
+
+            }
         </nav>
     </SectionContainer>
 </main>
@@ -48,7 +68,7 @@ import Badget from "../badget/badget.astro";
 <style>
     .main__container {
         max-width: 740px;
-        margin-top: 8rem;
+        margin-top: 5rem;
         margin-bottom: 3rem;
         margin-left: auto;
         margin-right: auto;
